@@ -58,7 +58,7 @@
         <!-- 线程组件 -->
         <dependency>
             <groupId>cn.evlight</groupId>
-            <artifactId>dynamic-thread-pool-spring-boot-service</artifactId>
+            <artifactId>dynamic-thread-pool-service</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
