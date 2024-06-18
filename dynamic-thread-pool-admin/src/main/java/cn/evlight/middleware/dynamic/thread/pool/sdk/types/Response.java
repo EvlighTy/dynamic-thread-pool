@@ -1,0 +1,48 @@
+package cn.evlight.middleware.dynamic.thread.pool.sdk.types;
+
+import lombok.*;
+
+import java.io.Serializable;
+
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class Response<T> implements Serializable {
+
+    private static final long serialVersionUID = -2474596551402989285L;
+
+    private String code;
+    private String info;
+    private T data;
+
+    public static<T> Response<T> success(T data){
+        return Response.<T>builder()
+                .code(Code.SUCCESS.getCode())
+                .info(Code.SUCCESS.getInfo())
+                .data(data)
+                .build();
+    }
+
+    public static<T> Response<T> error(){
+        return Response.<T>builder()
+                .code(Code.UN_ERROR.getCode())
+                .info(Code.UN_ERROR.getInfo())
+                .build();
+    }
+
+    @AllArgsConstructor
+    @NoArgsConstructor
+    @Getter
+    public enum Code {
+        SUCCESS("0000", "调用成功"),
+        UN_ERROR("0001", "调用失败"),
+        ILLEGAL_PARAMETER("0002", "非法参数"),
+        ;
+
+        private String code;
+        private String info;
+
+    }
+}
+

@@ -1,0 +1,126 @@
+package cn.evlight.middleware.dynamic.thread.pool.sdk.trigger.dto.request;
+
+/**
+ * @Description: 修改线程池配置参数请求参数
+ * @Author: evlight
+ * @Date: 2024/6/17
+ */
+public class AdjustThreadPoolConfigRequestDTO {
+
+    /**
+     * 应用名称
+     */
+    private String appName;
+
+    /**
+     * 线程池名称
+     */
+    private String threadPoolName;
+
+    /**
+     * 核心线程数
+     */
+    private int corePoolSize;
+
+    /**
+     * 最大线程数
+     */
+    private int maximumPoolSize;
+
+    /**
+     * 当前活跃线程数
+     */
+    private int activeCount;
+
+    /**
+     * 当前池中线程数
+     */
+    private int poolSize;
+
+    /**
+     * 队列类型
+     */
+    private String queueType;
+
+    /**
+     * 当前队列任务数
+     */
+    private int queueSize;
+
+    /**
+     * 队列剩余任务数
+     */
+    private int remainingCapacity;
+
+    public String getAppName() {
+        return appName;
+    }
+
+    public void setAppName(String appName) {
+        this.appName = appName;
+    }
+
+    public String getThreadPoolName() {
+        return threadPoolName;
+    }
+
+    public void setThreadPoolName(String threadPoolName) {
+        this.threadPoolName = threadPoolName;
+    }
+
+    public int getCorePoolSize() {
+        return corePoolSize;
+    }
+
+    public void setCorePoolSize(int corePoolSize) {
+        this.corePoolSize = corePoolSize;
+    }
+
+    public int getMaximumPoolSize() {
+        return maximumPoolSize;
+    }
+
+    public void setMaximumPoolSize(int maximumPoolSize) {
+        this.maximumPoolSize = maximumPoolSize;
+    }
+
+    public int getActiveCount() {
+        return activeCount;
+    }
+
+    public void setActiveCount(int activeCount) {
+        this.activeCount = activeCount;
+    }
+
+    public int getPoolSize() {
+        return poolSize;
+    }
+
+    public void setPoolSize(int poolSize) {
+        this.poolSize = poolSize;
+    }
+
+    public String getQueueType() {
+        return queueType;
+    }
+
+    public void setQueueType(String queueType) {
+        this.queueType = queueType;
+    }
+
+    public int getQueueSize() {
+        return queueSize;
+    }
+
+    public void setQueueSize(int queueSize) {
+        this.queueSize = queueSize;
+    }
+
+    public int getRemainingCapacity() {
+        return remainingCapacity;
+    }
+
+    public void setRemainingCapacity(int remainingCapacity) {
+        this.remainingCapacity = remainingCapacity;
+    }
+}
